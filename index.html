@@ -24,17 +24,13 @@
         }
         .hero-content p { font-size: 1.1rem; margin: 0 0 20px; font-weight: 300; text-shadow: 1px 1px 4px rgba(0,0,0,0.8); }
 
-        /* Секция с логотипом */
-        .brand-section { padding: 60px 20px 40px; text-align: center; }
-        .section-logo { max-width: 140px; height: auto; }
-
         /* Общие стили секций */
-        .section { padding: 40px 20px 80px; max-width: 1100px; margin: 0 auto; }
+        .section { padding: 80px 20px; max-width: 1100px; margin: 0 auto; }
         h2 { text-align: center; font-size: 2.2rem; margin-bottom: 40px; text-transform: uppercase; letter-spacing: 2px; }
         .accent { color: var(--main-blue); }
 
-        /* Сетка цен */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 20px; }
+        /* Сетка услуг */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-bottom: 40px; }
         .card { background: var(--card-bg); padding: 40px; border-radius: 20px; transition: 0.3s; border-bottom: 4px solid transparent; }
         .card:hover { transform: translateY(-5px); border-color: var(--main-blue); }
         .price-tag { font-size: 2.2rem; font-weight: 800; color: var(--main-blue); display: block; margin: 15px 0; }
@@ -46,30 +42,23 @@
         
         .btn { display: inline-block; background: var(--main-blue); color: white; padding: 16px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; transition: 0.3s; text-align: center; border: none; cursor: pointer; }
         .btn-insta { background: var(--insta); margin-top: 15px; }
-        .btn:hover { opacity: 0.9; transform: scale(1.02); }
 
         /* Видео YouTube */
-        .video-box { position: relative; padding-bottom: 56.25%; border-radius: 20px; overflow: hidden; background: url('https://img.youtube.com/vi/WywMlSmoGf8/maxresdefault.jpg') center/cover; cursor: pointer; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+        .video-box { position: relative; padding-bottom: 56.25%; border-radius: 20px; overflow: hidden; background: url('https://img.youtube.com/vi/WywMlSmoGf8/maxresdefault.jpg') center/cover; cursor: pointer; }
+        .video-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; }
 
-        /* Лого C2Sky УВЕЛИЧЕНО */
-        .c2sky-logo { 
-            max-width: 280px; /* Было 180px */
-            margin-top: 25px; 
-            opacity: 1; 
-            filter: drop-shadow(0 4px 15px rgba(0,0,0,0.3));
-        }
+        .c2sky-logo { max-width: 280px; margin-top: 25px; filter: drop-shadow(0 4px 15px rgba(0,0,0,0.3)); }
 
+        /* Футер и лого в самом низу */
         .footer { text-align: center; padding: 80px 20px; background: #0a0a0a; border-top: 1px solid #222; }
+        .footer-logo { max-width: 100px; margin-top: 40px; opacity: 0.6; transition: 0.3s; }
+        .footer-logo:hover { opacity: 1; }
 
         @media (max-width: 768px) {
             .hero { display: flex; flex-direction: column; height: auto; }
-            #hero-vid { width: 100%; height: auto; }
             .hero-content { position: relative; padding: 30px 20px; text-align: center; align-items: center; width: 100%; }
-            .instructor-card { text-align: center; justify-content: center; padding: 30px 20px; }
-            .instructor-img { width: 220px; height: 220px; }
-            .section-logo { max-width: 110px; }
-            .c2sky-logo { max-width: 220px; } /* Адаптивный размер для мобильных */
+            .instructor-card { text-align: center; justify-content: center; }
+            .c2sky-logo { max-width: 220px; }
         }
     </style>
 </head>
@@ -88,11 +77,7 @@
         </div>
     </section>
 
-    <div class="brand-section">
-        <img src="favicon.png" alt="Alwaysummer Logo" class="section-logo">
-    </div>
-
-    <section class="section" style="padding-top: 0;">
+    <section class="section">
         <div class="grid">
             <div class="card">
                 <h3>Индивидуальный урок</h3>
@@ -114,7 +99,7 @@
 
     <section class="section" style="background: #0a0a0a; max-width: 100%;">
         <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px; text-align: center;">
-            <h2>Процесс <span class="accent">обучения</span></h2>
+            <h2><span class="accent">Обучение</span></h2>
             <div class="video-box" onclick="window.open('https://www.youtube.com/watch?v=WywMlSmoGf8', '_blank')">
                 <div class="video-overlay">
                     <div style="background:var(--main-blue); width:70px; height:70px; border-radius:50%; display:flex; align-items:center; justify-content:center;">
@@ -123,14 +108,14 @@
                 </div>
             </div>
             <p style="font-style: italic; margin-top: 30px; opacity: 0.7;">
-                Базируемся на территории профессионального кайт-центра <a href="https://c2skykitecenter.com" target="_blank" style="color: var(--main-blue);">C2Sky</a>.
+                Базируемся на территории кайт-центра <a href="https://c2skykitecenter.com" target="_blank" style="color: var(--main-blue);">C2Sky</a>.
             </p>
             <img src="c2sky.jpg" alt="C2Sky Logo" class="c2sky-logo">
         </div>
     </section>
 
     <section class="section">
-        <h2>Старший <span class="accent">инструктор</span></h2>
+        <h2><span class="accent">Инструктор</span></h2>
         <div class="instructor-card">
             <img src="alex.jpg" alt="Александр Коваленко" class="instructor-img">
             <div class="instructor-info">
@@ -139,7 +124,7 @@
                     <li>✓ Кайт инструктор с 2010 года</li>
                     <li>✓ IKO level 3 инструктор</li>
                     <li>✓ Сотни обученных учеников</li>
-                    <li>✓ Призер соревнований: фристайл, биг-эир</li>
+                    <li>✓ Призер соревнований: фристайл, биг-эир, курс-рейс</li>
                 </ul>
                 <a href="https://www.instagram.com/aleksandr_always_leto?igsh=ejVjaGwwcmw4aW5n&utm_source=qr" target="_blank" class="btn btn-insta">
                     <i class="fab fa-instagram"></i> Instagram
@@ -149,8 +134,10 @@
     </section>
 
     <footer class="footer">
-        <a href="https://t.me/kifesurf" class="btn" style="background: #24A1DE; margin-bottom: 30px;"><i class="fab fa-telegram"></i> Telegram: @kifesurf</a>
-        <p style="opacity: 0.3; font-size: 0.8rem; letter-spacing: 1px;">ALWAYSUMMER.CC | MUI NE, VIETNAM</p>
+        <a href="https://t.me/kifesurf" class="btn" style="background: #24A1DE;"><i class="fab fa-telegram"></i> Telegram: @kifesurf</a>
+        <br>
+        <img src="favicon.png" alt="Alwaysummer Logo" class="footer-logo">
+        <p style="opacity: 0.3; font-size: 0.8rem; letter-spacing: 1px; margin-top: 20px;">ALWAYSUMMER.CC | MUI NE, VIETNAM</p>
     </footer>
 
 </body>
