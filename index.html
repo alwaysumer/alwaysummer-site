@@ -64,6 +64,7 @@
 
         @media (max-width: 768px) {
             .hero { display: flex; flex-direction: column; height: auto; }
+            #hero-vid { width: 100%; height: auto; }
             .hero-content { position: relative; padding: 30px 20px; text-align: center; align-items: center; width: 100%; }
             .instructor-card { text-align: center; justify-content: center; padding: 30px 20px; }
             .instructor-img { width: 220px; height: 220px; }
@@ -77,6 +78,7 @@
     <section class="hero">
         <div class="video-container">
             <video autoplay muted loop playsinline id="hero-vid">
+                <source src="hero-video-mobile.mp4" type="video/mp4" media="(max-width: 768px)">
                 <source src="hero-video.mp4" type="video/mp4">
             </video>
         </div>
